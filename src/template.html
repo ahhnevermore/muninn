@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muninn</title>
+  </head>
+  <body>
+    <div class="container surface">
+      <div class="topbar surface elev-1">
+        <h1>Muninn</h1>
+        <button type="button" id="newTodo">New+</button>
+        <!--
+        <button type="button" id="import">Import</button>
+        <button type="button" id="export">Export</button>
+        -->
+      </div>
+      <div class="sidebar surface elev-2">
+        <div class="fixed">
+          <button type="button" data-key="recent" class="sidebar-item selected">Recent</button>
+          <button type="button" data-key="today" class="sidebar-item">Today</button>
+          <button type="button" data-key="upcoming" class="sidebar-item">This Week</button>
+        </div>
+        <div class="projects"></div>
+      </div>
+
+      <div class="main"></div>
+
+      <form id="new-todo-form" action="" method="post" class="surface elev-12 hidden">
+        <legend>Add A New Task</legend>
+        <div class="form-task-name-wrapper">
+          <label for="form-task-name">Title</label><br />
+          <input type="text" id="form-task-name" name="title" maxlength="24" required />
+        </div>
+
+        <fieldset class="priority-group">
+          <legend>Priority</legend>
+
+          <label>
+            <input type="radio" name="priority" value="S" />
+            <span>S</span>
+          </label>
+
+          <label>
+            <input type="radio" name="priority" value="A" />
+            <span>A</span>
+          </label>
+
+          <label>
+            <input type="radio" name="priority" value="B" />
+            <span>B</span>
+          </label>
+
+          <label>
+            <input type="radio" name="priority" value="C" checked />
+            <span>C</span>
+          </label>
+        </fieldset>
+        <div class="form-task-project-wrapper">
+          <label for="form-task-project">Project</label><br />
+          <input type="" id="form-task-project" name="project" maxlength="15" />
+        </div>
+        <div class="form-task-date-wrapper">
+          <label for="form-task-date">Due Date</label><br />
+          <input type="date" id="form-task-date" name="date" />
+          <input type="time" id="form-task-time" name="time" />
+        </div>
+
+        <div class="form-task-blurb-wrapper">
+          <label for="form-task-blurb">Description</label><br />
+          <input type="text" id="form-task-blurb" name="blurb" maxlength="120" />
+        </div>
+
+        <div class="form-tag-search-wrapper">
+          <input
+            type="text"
+            id="form-tag-search"
+            name="tag-search"
+            placeholder="Add Tags: max 5"
+            maxlength="12"
+          />
+          <div class="tag-container surface elev-24 hidden">
+            <button type="button" id="fts1" class="hidden">tag 1</button>
+            <button type="button" id="fts2" class="hidden">tag 1</button>
+            <button type="button" id="fts3" class="hidden">tag 1</button>
+            <button type="button" id="fts4" class="hidden">tag 1</button>
+            <button type="button" id="fts5" class="hidden">tag 1</button>
+            <button type="button" id="fts-add-tag">Add Tag</button>
+          </div>
+        </div>
+        <div class="form-tags"></div>
+
+        <button type="submit" form="new-todo-form" class="form-task-submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

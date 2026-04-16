@@ -1,0 +1,52 @@
+.sidebar {
+  grid-row: 2/3;
+  width: 100%;
+  height: 89.5vh;
+  margin: 0.3rem;
+  position: sticky;
+  display: grid;
+  top: 10%;
+  gap: 0;
+  overflow-y: auto;
+  padding-top: 2%;
+}
+
+.sidebar button {
+  width: 100%;
+  color: white;
+  background: transparent;
+  font-family: "NorseBold";
+  font-size: 24px;
+  padding: 5%;
+  border: none;
+  text-align: left;
+}
+
+.sidebar button:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.sidebar button:active {
+  background-color: rgb(255, 255, 255, 0.12);
+}
+
+.fixed {
+  margin-top: 20%;
+}
+
+.sidebar button.selected {
+  background-color: rgba(187, 134, 252, 0.1);
+}
+
+.sidebar button.selected:hover {
+  background-color: rgba(187, 134, 252, 0.15);
+}
+
+.sidebar button.selected:active {
+  background-color: rgba(187, 134, 252, 0.3);
+}
+
+.projects {
+  margin-top: 10%;
+  display: grid;
+}

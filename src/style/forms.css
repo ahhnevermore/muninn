@@ -1,0 +1,142 @@
+#new-todo-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  font-size: 30px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+  gap: 2%;
+  padding: 2%;
+  z-index: 10;
+}
+
+#new-todo-form > legend {
+  grid-column: 1/4;
+  justify-self: center;
+}
+.form-task-name-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  grid-column: 1/2;
+}
+
+.priority-group {
+  height: 40%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  grid-column: 2/4;
+}
+
+#new-todo-form input:focus {
+  border-color: var(--primary);
+}
+
+#new-todo-form input {
+  text-align: left;
+  font-family: "NorseBold";
+  font-size: 22px;
+}
+
+#new-todo-form [type="radio"] {
+  accent-color: var(--primary);
+}
+
+.form-task-project-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  grid-column: 1/2;
+  justify-self: center;
+}
+.form-task-project-wrapper input {
+  width: 70%;
+}
+
+.form-task-blurb-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+  grid-column: 1/4;
+}
+.form-task-blurb-wrapper input {
+  width: 70%;
+  height: 30%;
+}
+
+.form-task-date-wrapper {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 2%;
+  grid-column: 2/4;
+}
+
+.form-task-submit {
+  grid-column: 1/4;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary);
+  font-family: "NorseBold";
+  font-size: 26px;
+}
+
+.tag-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tag-container button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-family: "NorseBold";
+  font-size: 20px;
+  margin-bottom: 2%;
+}
+
+.tag-container button:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.tag-container button:active {
+  background-color: rgba(255, 255, 255, 0.26);
+}
+.form-tag-search-wrapper {
+  position: relative;
+}
+
+.form-tag-search-wrapper input {
+  width: 100%;
+}
+
+.form-tags {
+  grid-column: 2/4;
+}
+
+.form-tags {
+  display: flex;
+  gap: 1%;
+  align-items: center;
+  height: 50%;
+  margin: 1%;
+  gap: 1%;
+}
+.form-tags button {
+  color: white;
+  font-family: "NorseBold";
+  font-size: large;
+  width: 19%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}

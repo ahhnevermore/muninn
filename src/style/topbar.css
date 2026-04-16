@@ -1,0 +1,56 @@
+.topbar {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/3;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(15px) brightness(0.6);
+}
+
+.topbar #newTodo {
+  background-color: var(--secondary);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  width: 12%;
+  height: 40%;
+  font-family: "NorseBold";
+  font-size: 22px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.topbar button:not(#newTodo) {
+  background-color: var(--primary);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  width: 8%;
+  height: 35%;
+  font-family: "NorseBold";
+  font-size: 19px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.topbar #newTodo:hover {
+  background-color: var(--secondary-hover);
+}
+.topbar button:not(#newTodo):hover {
+  background-color: var(--primary-hover);
+}
+.topbar #newTodo:active {
+  background-color: var(--secondary-active);
+}
+
+.topbar button:not(#newTodo):active {
+  background-color: var(--primary-active);
+}
+.topbar h1 {
+  font-size: 28px;
+  margin-left: 25%;
+  margin-right: 25%;
+}

@@ -1,0 +1,78 @@
+:root {
+  --bg: #121212;
+  --primary: #bb86fc;
+  --primary-rgb: 187, 134, 252;
+  --variant: #3700b3;
+  --primary-hover: #cfabfd;
+  --primary-active: #aa67f9;
+  --secondary-hover: #92e9dc;
+  --secondary-active: #00c7ab;
+  --secondary: #03dac6;
+  --error: #cf6679;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "NorseBold";
+  src: url(norse/Norsebold.otf);
+}
+
+/* * {
+  border: 1px solid red;
+} */
+
+.surface {
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, var(--elevation, 0)),
+      rgba(255, 255, 255, var(--elevation, 0))
+    ),
+    var(--surface, #121212);
+}
+/* 
+  0      → background
+1–3    → basic UI (cards, buttons)
+4–8    → navigation / floating UI
+12–16  → overlays
+24     → highest priority UI */
+.elev-1 {
+  --elevation: 0.05;
+}
+.elev-2 {
+  --elevation: 0.07;
+}
+.elev-3 {
+  --elevation: 0.08;
+}
+.elev-4 {
+  --elevation: 0.09;
+}
+.elev-6 {
+  --elevation: 0.11;
+}
+.elev-8 {
+  --elevation: 0.12;
+}
+.elev-12 {
+  --elevation: 0.14;
+}
+.elev-16 {
+  --elevation: 0.15;
+}
+.elev-24 {
+  --elevation: 0.16;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "NorseBold";
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: auto 1fr;
+  position: relative;
+}
